@@ -1,0 +1,28 @@
+# Java
+*.class
+*.jar
+*.war
+*.log
+
+# Gradle
+.gradle/
+build/
+out/
+
+# Gradle Wrapper (필요한 항목 제외 안 함)
+!gradlew
+!gradlew.bat
+!gradle/wrapper/gradle-wrapper.jar
+!gradle/wrapper/gradle-wrapper.properties
+
+# IntelliJ IDEA
+.idea/
+*.iml
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Local config
+.env
+*.local
