@@ -1,4 +1,4 @@
-package hello.rebobatch.domain.mapper;
+package hello.rebobatch.domain.store.mapper;
 
 import hello.rebobatch.global.error.ValidationException;
 import hello.rebobatch.domain.store.dto.CsvRawDataDto;

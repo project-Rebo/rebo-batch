@@ -1,4 +1,4 @@
-package hello.rebobatch.domain.policy;
+package hello.rebobatch.domain.store.policy;
 
 import hello.rebobatch.global.error.ValidationException;
 import org.springframework.batch.core.step.skip.SkipPolicy;
