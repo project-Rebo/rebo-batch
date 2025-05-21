@@ -1,5 +1,7 @@
 package hello.rebobatch.domain.store.listener;
 
+import hello.rebobatch.domain.store.dto.CsvRawDataDto;
+import hello.rebobatch.domain.store.entity.StoreStagingData;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.batch.core.SkipListener;

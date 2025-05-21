@@ -1,8 +1,8 @@
 package hello.rebobatch.domain.store.listener;
 
-import hello.backend.batch.staging2.CsvRawDataDto;
-import hello.backend.batch.staging2.StoreStagingData;
-import hello.backend.store.domain.Store;
+import hello.rebobatch.domain.store.dto.CsvRawDataDto;
+import hello.rebobatch.domain.store.entity.Store;
+import hello.rebobatch.domain.store.entity.StoreStagingData;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.batch.core.SkipListener;
@@ -13,7 +13,7 @@ import java.util.Collections;
 
 @Slf4j
 @RequiredArgsConstructor
-public class StoreToMainSkipListener implements SkipListener<Store,StoreStagingData> {
+public class StoreToMainSkipListener implements SkipListener<Store, StoreStagingData> {
 
     private final FlatFileItemWriter<CsvRawDataDto> errorWriter;
 

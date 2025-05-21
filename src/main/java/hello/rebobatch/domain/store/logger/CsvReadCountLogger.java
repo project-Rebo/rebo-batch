@@ -1,4 +1,4 @@
-package hello.rebobatch.domain.logger;
+package hello.rebobatch.domain.store.logger;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.batch.core.ExitStatus;

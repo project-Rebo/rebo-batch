@@ -1,4 +1,4 @@
-package hello.backend.batch.staging2;
+package hello.rebobatch.domain.store.step;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.batch.core.JobExecution;
