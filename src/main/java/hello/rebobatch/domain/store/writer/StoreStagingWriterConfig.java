@@ -1,5 +1,6 @@
 package hello.rebobatch.domain.store.writer;
 
+import hello.rebobatch.domain.store.entity.StoreStagingData;
 import lombok.RequiredArgsConstructor;
 import org.springframework.batch.item.database.BeanPropertyItemSqlParameterSourceProvider;
 import org.springframework.batch.item.database.JdbcBatchItemWriter;

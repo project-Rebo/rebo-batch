@@ -1,5 +1,7 @@
 package hello.rebobatch.domain.store.processor;
 
+import hello.rebobatch.domain.store.dto.CsvRawDataDto;
+import hello.rebobatch.domain.store.entity.StoreStagingData;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.batch.item.ItemProcessor;
 import org.springframework.context.annotation.Configuration;

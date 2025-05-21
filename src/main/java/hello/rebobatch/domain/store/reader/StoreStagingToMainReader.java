@@ -1,6 +1,6 @@
 package hello.rebobatch.domain.store.reader;
 
-import hello.backend.batch.staging2.StoreStagingData;
+import hello.rebobatch.domain.store.entity.StoreStagingData;
 import lombok.RequiredArgsConstructor;
 import org.springframework.batch.core.configuration.annotation.StepScope;
 import org.springframework.batch.item.database.JdbcPagingItemReader;

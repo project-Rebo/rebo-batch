@@ -1,11 +1,12 @@
 package hello.rebobatch.domain.store.reader;
 
+import hello.rebobatch.domain.store.mapper.SafeLineMapper;
+import hello.rebobatch.domain.store.dto.CsvRawDataDto;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.batch.item.file.transform.DelimitedLineTokenizer;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.batch.core.configuration.annotation.StepScope;
 import org.springframework.batch.item.file.FlatFileItemReader;
-import org.springframework.batch.item.file.builder.FlatFileItemReaderBuilder;
 import org.springframework.batch.item.file.mapping.BeanWrapperFieldSetMapper;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

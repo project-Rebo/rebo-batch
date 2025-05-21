@@ -1,6 +1,6 @@
 package hello.rebobatch.domain.store.writer;
 
-import hello.backend.batch.staging2.CsvRawDataDto;
+import hello.rebobatch.domain.store.dto.CsvRawDataDto;
 import org.springframework.batch.core.configuration.annotation.StepScope;
 import org.springframework.batch.item.file.FlatFileItemWriter;
 import org.springframework.batch.item.file.builder.FlatFileItemWriterBuilder;

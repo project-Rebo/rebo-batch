@@ -1,7 +1,8 @@
 package hello.rebobatch.domain.store.processor;
 
-import hello.backend.batch.staging2.StoreStagingData;
-import hello.backend.store.domain.Store;
+
+import hello.rebobatch.domain.store.entity.Store;
+import hello.rebobatch.domain.store.entity.StoreStagingData;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.batch.item.ItemProcessor;
 import org.springframework.stereotype.Component;
