@@ -1,6 +1,7 @@
 package hello.rebobatch.domain.store.job;
 
-import hello.backend.batch.staging2.CsvTotalCountLogger;
+import hello.rebobatch.domain.store.partitioner.StoreStagingToMainPartitioner;
+import hello.rebobatch.domain.store.step.CsvTotalCountLogger;
 import lombok.RequiredArgsConstructor;
 import org.springframework.batch.core.Job;
 import org.springframework.batch.core.Step;

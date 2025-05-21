@@ -1,9 +1,9 @@
 package hello.rebobatch.domain.store.step;
 
-import hello.backend.batch.staging2.CsvRawDataDto;
-import hello.backend.batch.staging2.StoreSkipListener;
-import hello.backend.batch.staging2.StoreStagingData;
-import hello.backend.store.domain.Store;
+import hello.rebobatch.domain.store.dto.CsvRawDataDto;
+import hello.rebobatch.domain.store.entity.Store;
+import hello.rebobatch.domain.store.entity.StoreStagingData;
+import hello.rebobatch.domain.store.listener.StoreToMainSkipListener;
 import lombok.RequiredArgsConstructor;
 import org.springframework.batch.core.Step;
 import org.springframework.batch.core.repository.JobRepository;

@@ -1,4 +1,4 @@
-package hello.backend.batch.staging2;
+package hello.rebobatch.domain.store.partitioner;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.batch.core.configuration.annotation.StepScope;

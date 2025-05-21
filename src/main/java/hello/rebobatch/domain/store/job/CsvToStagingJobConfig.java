@@ -1,5 +1,6 @@
 package hello.rebobatch.domain.store.job;
 
+import hello.rebobatch.domain.store.partitioner.CsvPartitioner;
 import lombok.RequiredArgsConstructor;
 import org.springframework.batch.core.Job;
 import org.springframework.batch.core.Step;
