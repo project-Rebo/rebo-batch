@@ -1,0 +1,27 @@
+spring:
+  config:
+    import: file:dev.env[.properties]
+
+  datasource:
+    url: jdbc:postgresql://${POSTGRES_HOST}:${POSTGRES_PORT}/${POSTGRES_DB}
+    username: ${POSTGRES_USER}
+    password: ${POSTGRES_PASSWORD}
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        format_sql: true
+    show-sql: true
+
+  batch:
+    jdbc:
+      initialize-schema: never
+    job:
+      enabled: false
+    chunk-size: 10000
+    grid-size: 6
+    grid-size-phase1: 20
