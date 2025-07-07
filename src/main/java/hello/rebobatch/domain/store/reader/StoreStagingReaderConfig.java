@@ -19,19 +19,34 @@ public class StoreStagingReaderConfig {
     @Bean
     @StepScope
     public FlatFileItemReader<CsvRawDataDto> storeCsvReader(
-            @Value("#{stepExecutionContext['filePath']}") String filePath
+            @Value("#{stepExecutionContext['virtualFiles']}") String virtualFiles
     ) {
-        log.info("읽어들일 파일 경로: {}", filePath);
+        log.info("가상파일 정보: {}", virtualFiles);
 
+        // 가상파일 정보 파싱: "파일경로,시작라인,끝라인" (파티션당 하나의 가상파일)
+        String[] parts = virtualFiles.split(",");
+        String filePath = parts[0];
+        long startLine = Long.parseLong(parts[1]);
+        long endLine = Long.parseLong(parts[2]);
+        long lineCount = endLine - startLine + 1;
+        
+        log.info("📄 처리할 가상파일: {} [라인 {}-{}] ({} 행)", 
+            filePath.substring(filePath.lastIndexOf('/') + 1), 
+            startLine, endLine, lineCount);
+        
         FlatFileItemReader<CsvRawDataDto> reader = new FlatFileItemReader<>();
-        reader.setName("storeCsvReader");
+        reader.setName("virtualFileReader");
         reader.setResource(new FileSystemResource(filePath));
-        reader.setLinesToSkip(1);
+        reader.setLinesToSkip((int) (startLine - 1)); // 시작 라인 전까지 스킵 (헤더 포함)
+        reader.setMaxItemCount((int) lineCount); // 읽을 라인 수 제한
         reader.setEncoding("UTF-8");
-
+        
         // SafeLineMapper 설정
         reader.setLineMapper(new SafeLineMapper(delimitedTokenizer(), fieldSetMapper()));
-
+        
+        log.info("🔧 Reader 설정 완료: Skip {} lines, Read {} lines", 
+            startLine - 1, lineCount);
+        
         return reader;
     }
 
